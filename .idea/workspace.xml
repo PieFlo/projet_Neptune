@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a8b100ef-b701-41c9-b566-a3fa5fe7354f" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/bootstrap/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="118" column="55" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateClient.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/updateClient.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePassword.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/updatePassword.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/panel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+              <folding>
+                <element signature="e#805#811#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>zend_extension</find>
+      <find>xdebug</find>
+      <find>pdo</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php713vc14x86x180322095120/php.ini" />
+        <option value="C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php5630vc11x86x180326130750/php.ini" />
+        <option value="$PROJECT_DIR$/function.php" />
+        <option value="$PROJECT_DIR$/gestionClients.php" />
+        <option value="$PROJECT_DIR$/connectionBDD.php" />
+        <option value="C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php713vc14x86x180326130750/php.ini" />
+        <option value="$PROJECT_DIR$/dfst.html" />
+        <option value="$PROJECT_DIR$/js/checkPassword.js" />
+        <option value="$PROJECT_DIR$/Index.html" />
+        <option value="$PROJECT_DIR$/baseHeader.html" />
+        <option value="$PROJECT_DIR$/baseFooter.html" />
+        <option value="$PROJECT_DIR$/html/header.html" />
+        <option value="$PROJECT_DIR$/html/headerLogged.html" />
+        <option value="$PROJECT_DIR$/html/headerUnlogged.html" />
+        <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/membre.php" />
+        <option value="$PROJECT_DIR$/header.html" />
+        <option value="$PROJECT_DIR$/panel.php" />
+        <option value="$PROJECT_DIR$/update.php" />
+        <option value="$PROJECT_DIR$/updatePassword.php" />
+        <option value="$PROJECT_DIR$/updateClient.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9009" />
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="e69142bf-2418-4274-b2df-7c2356fea9b5" name="Neptune" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7" />
+  <component name="PhpXdebugProxy" ide_key="xdebug" host="http://127.0.0.1" port="9010" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="446" />
+    <option name="y" value="-35" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code StylePHP</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralCoffeeScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Naming conventionsJavaScript</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>Symfony</id>
+          </State>
+          <State>
+            <id>TemplateSymfony</id>
+          </State>
+          <State>
+            <id>TwigSymfony</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>UndefinedPHP</id>
+          </State>
+          <State>
+            <id>UnusedPHP</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projet_Neptune" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet_Neptune" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="projet_Neptune" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP/Cours1 - V1/listepubrecherche.php" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../PHP/Cours1 - V1/listepubrecherche.php" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Web Page.Neptune">
+    <configuration name="Neptune-R" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="Neptune" session_id="xdebug" />
+    <configuration name="Neptune" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Neptune" start_url="/edsa-projet_Neptune/" />
+    <list>
+      <item itemvalue="PHP Remote Debug.Neptune-R" />
+      <item itemvalue="PHP Web Page.Neptune" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8b100ef-b701-41c9-b566-a3fa5fe7354f" name="Default" comment="" />
+      <created>1522054272795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522054272795</updated>
+      <workItem from="1522054275076" duration="2697000" />
+      <workItem from="1522057392337" duration="1189000" />
+      <workItem from="1522062482561" duration="1528000" />
+      <workItem from="1522093582062" duration="471000" />
+      <workItem from="1522143944874" duration="3093000" />
+      <workItem from="1522178734476" duration="1251000" />
+      <workItem from="1522223032365" duration="37000" />
+      <workItem from="1522226507050" duration="12000" />
+      <workItem from="1522235349613" duration="964000" />
+      <workItem from="1522258148806" duration="1142000" />
+      <workItem from="1522312569005" duration="585000" />
+      <workItem from="1522316610304" duration="10927000" />
+      <workItem from="1522345288520" duration="5408000" />
+      <workItem from="1522421197311" duration="59000" />
+      <workItem from="1522421332860" duration="11226000" />
+      <workItem from="1522490859189" duration="14697000" />
+      <workItem from="1522576847139" duration="18162000" />
+      <workItem from="1522687216337" duration="3817000" />
+      <workItem from="1522747362218" duration="1746000" />
+      <workItem from="1522756930342" duration="3167000" />
+      <workItem from="1522831878705" duration="5116000" />
+      <workItem from="1522841858886" duration="348000" />
+      <workItem from="1522912195053" duration="2951000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="91241000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28645834" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32968536" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956093" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="8" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/connectionBDD.php" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php713vc14x86x180322095120/php.ini-development" />
+    <entry file="file://C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php713vc14x86x180322095120/php.ini" />
+    <entry file="file://C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php5630vc11x86x180326130750/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="885" column="1" selection-start-line="885" selection-start-column="1" selection-end-line="885" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Inscription.php" />
+    <entry file="file://$PROJECT_DIR$/Save Code/projet_Neptune_Test_Save/function.php" />
+    <entry file="file://$PROJECT_DIR$/Inscription2.php" />
+    <entry file="file://$PROJECT_DIR$/../projet_Neptune_hold/Save Code/projet_Neptune_Test_Save/function.php" />
+    <entry file="file://$PROJECT_DIR$/connection_bdd.php" />
+    <entry file="file://$PROJECT_DIR$/add_user.php" />
+    <entry file="file://$PROJECT_DIR$/addPhotoPub.php" />
+    <entry file="file://$PROJECT_DIR$/compte_administrateur.php" />
+    <entry file="file://$PROJECT_DIR$/compte_client.php" />
+    <entry file="file://$PROJECT_DIR$/connect.php" />
+    <entry file="file://$PROJECT_DIR$/connect_admin.php" />
+    <entry file="file://$PROJECT_DIR$/function.php" />
+    <entry file="file://$PROJECT_DIR$/connexion.php" />
+    <entry file="file://$PROJECT_DIR$/Inscription_process2.php" />
+    <entry file="file://$PROJECT_DIR$/Inscription_process.php" />
+    <entry file="file://$PROJECT_DIR$/saveEditPub.php" />
+    <entry file="file://$PROJECT_DIR$/profilClient.php" />
+    <entry file="file://$PROJECT_DIR$/gestionClients.php" />
+    <entry file="file://$PROJECT_DIR$/gestionClients2.php" />
+    <entry file="file://$PROJECT_DIR$/gestionClients3.php" />
+    <entry file="file://$PROJECT_DIR$/numeroChambre.php" />
+    <entry file="file://$PROJECT_DIR$/sitePartieClients.php" />
+    <entry file="file://$PROJECT_DIR$/traitement.php" />
+    <entry file="file://$PROJECT_DIR$/updatePub.php" />
+    <entry file="file://$PROJECT_DIR$/gestionChambres.php" />
+    <entry file="file://F:/Nouveau dossier/SQL/exo_UPDATE_nomDeMaTable.sql" />
+    <entry file="file://$PROJECT_DIR$/connectionBDD.php" />
+    <entry file="file://C:/Program Files (x86)/EasyPHP-Devserver-17/eds-binaries/php/php713vc14x86x180326130750/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7867">
+          <caret line="1035" column="20" selection-start-line="1035" selection-start-column="17" selection-end-line="1035" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1403">
+          <caret line="601" column="22" selection-start-line="601" selection-start-column="22" selection-end-line="601" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dfst.html" />
+    <entry file="file://$PROJECT_DIR$/js/checkPassword.js" />
+    <entry file="file://$PROJECT_DIR$/baseFooter.html" />
+    <entry file="file://$PROJECT_DIR$/baseHeader.html" />
+    <entry file="file://$PROJECT_DIR$/html/header.html" />
+    <entry file="file://$PROJECT_DIR$/html/headerLogged.html" />
+    <entry file="file://$PROJECT_DIR$/html/headerUnlogged.html" />
+    <entry file="file://$PROJECT_DIR$/membre.php" />
+    <entry file="file://$PROJECT_DIR$/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="132" column="7" lean-forward="true" selection-start-line="122" selection-end-line="132" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+          <folding>
+            <element signature="e#805#811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updateClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updatePassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="118" column="55" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -22,8 +22,8 @@ if(isset($_SESSION['email'])){
     <div class="panel panel-default">
         <div class="panel-heading">Profil</div>
         <div class="panel-body">
-            <a href="update.php">Modifier ses informations</a><br>
-            <a>Modifier son mot de passe</a>
+            <a href="updateClient.php">Modifier ses informations</a><br>
+            <a>Modifier son mot de passe</a><br>
             <a href="desinscrire.php">Se désinscrire</a>
         </div>
     </div>

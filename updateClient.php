@@ -1,90 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modification des informations</title>
 <?php
 session_start();
-include 'connexionBDD.php'; // Permet de se connecter à la base de données.
+include_once ('connexionBDD.php');// Permet de se connecter à la base de données.
+if (isset($_POST) && count($_POST) > 0) {
+    extract(array_map("htmlspecialchars", $_POST));
+    $bdd = getDataBase();
+    try {
+        $stmt = $bdd->prepare("UPDATE clients SET civil = :civil, nom = :nom, prenom = :prenom, adresse = :adresse, codePostal = :codePostal, ville = :ville, pays = :pays, 
+                                            dateNaissance = :dateNaissance, email = :email WHERE numeroClient = :numeroClient");
 
-if(isset($_POST['submit'])){
-	$prenom = htmlspecialchars(trim($_POST['prenom'])); // trim permet d'enlever les espaces du début et de la fin dans la case 'prenom'.
+        $stmt->bindParam(':civil', $civil);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':adresse', $adresse);
+        $stmt->bindParam(':codePostal', $codePostal);
+        $stmt->bindParam(':ville', $ville);
+        $stmt->bindParam(':pays', $pays);
+        $stmt->bindParam(':dateNaissance', $dateNaissance);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':numeroClient', $numeroClient);
+        $nbModifs = $stmt->execute();
+    } catch (Exception $e) {
+        $nbModifs = 0;
+    }
+    if ($nbModifs == 1) {
+        echo "La mise à jour a réussie.";
+    } else {
+        echo "La mise à jour a échoués";
+    }
+} else {
+    $numeroClientToEdit = -1;
+    if(isset($_GET) && count($_GET) > 0 && $_SESSION['admin']== true){
+        // $numeroClient = htmlspecialchars($_GET['numeroClient']);
+    }else{
+        $numeroClientToEdit = $_SESSION['numeroClient'];
+    }
+    if ($numeroClientToEdit > 0){
 
-	if(empty($prenom)){
-		echo "Veuillez completez ce champ";
-	}else{
-		$query = $bdd->prepare("UPDATE clients SET prenom = '$prenom' WHERE prenom = '{$_SESSION['prenom']}'") or die('Erreur : ' . $e->getMessage());
-		// or die('Erreur : ' . $e->getMessage()); // Pour afficher l'erreur s'il y en a une.
-		$query->execute(); // Exécute la requette $query.
+        $bdd = getDataBase();
+        $query = $bdd->prepare("SELECT * FROM clients WHERE numeroClient=:numeroClientToEdit");
+        $query->bindParam(':numeroClientToEdit', $numeroClientToEdit);
+        $query->execute();
 
-		header("Location:logout.php");
-	}
-}
-?>
+        $clients = $query->fetch(PDO::FETCH_OBJ);
+        if (! $clients) {
+            $numeroClientToEdit = -1;
+        }
+    }
+    ?>
+    <form method="post" action="updateClient.php" class="form-horizontal">
 
-<form method="post" action="register.php" class="form-horizontal">
-
+        <div class="form-group">
+                <input type="hidden" id="inputNumCli" name="numeroClient" class="form-control" value="<?php echo $clients->numeroClient?>">
+        </div>
         <div class="form-group">
             <label for="inputNom" class="control-label col-xs-4">Nom</label>
             <div class="col-xs-5">
-                <input type="text" id="inputNom" name="nom" placeholder="Doe" class="form-control" required>
+                <input type="text" id="inputNom" name="nom" class="form-control" value="<?php echo $clients->nom ?>" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputPrenom" class="control-label col-xs-4 col-form-label">Prénom</label>
             <div class="col-xs-5">
-                <input type="text" id="inputPrenom" name="prenom" placeholder="John" class="form-control" required>
+                <input type="text" id="inputPrenom" name="prenom" class="form-control" value="<?php echo $clients->prenom ?>" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputCivil" class="control-label col-xs-4">Civilité</label>
             <div class="col-xs-5">
-                <select id="inputCivil" name="civil" class="form-control" required>
-                    <option value="Monsieur">Monsieur</option>
-                    <option value="Madame">Madame</option>
-                    <option value="Mademoiselle">Mademoiselle</option>
+                <select id="inputCivil" name="civil" class="form-control"  required>
+                    <option value="Monsieur" <?php echo ($clients->civil=="Monsieur") ? "selected" : ""; ?>>Monsieur</option>
+                    <option value="Madame" <?php echo ($clients->civil=="Madame") ? "selected" : ""; ?>>Madame</option>
+                    <option value="Mademoiselle" <?php echo ($clients->civil=="Mademoiselle") ? "selected" : ""; ?>>Mademoiselle </option>
                 </select>
             </div>
         </div>
         <div class="form-group">
             <label for="inputDateNaissance" class="control-label col-xs-4">Date de naissance</label>
             <div class="col-xs-5">
-                <input type="date" id="inputDateNaissance" name="dateNaissance" class="form-control" required>
+                <input type="date" id="inputDateNaissance" name="dateNaissance" class="form-control" value="<?php echo $clients->dateNaissance ?>" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputAdresse" class="control-label col-xs-4">Adresse</label>
             <div class="col-xs-5">
-                <input type="text" id="inputAdresse" name="adresse" placeholder="19 Rue Turgot"
-                       class="form-control" required>
+                <input type="text" id="inputAdresse" name="adresse"
+                       class="form-control" value="<?php echo $clients->adresse ?>" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputCodePostal" class="control-label col-xs-4">Code postal</label>
             <div class="col-xs-5">
-                <input type="text" id="inputCodePostal" name="codePostal" placeholder="75009"
-                       class="form-control" required>
+                <input type="text" id="inputCodePostal" name="codePostal"
+                       class="form-control" value="<?php echo $clients->codePostal ?>" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputVille" class="control-label col-xs-4">Ville</label>
             <div class="col-xs-5">
-                <input type="text" id="inputVille" name="ville" placeholder="Paris" class="form-control" required>
+                <input type="text" id="inputVille" name="ville" class="form-control" value="<?php echo $clients->ville ?>" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputPays" class="control-label col-xs-4">Pays</label>
             <div class="col-xs-5">
-                <input type="text" id="inputPays" name="pays" placeholder="France" class="form-control" required>
+                <input type="text" id="inputPays" name="pays" class="form-control" value="<?php echo $clients->pays ?>" required>
 
             </div>
         </div>
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-4">Email</label>
             <div class="col-xs-5">
-                <input type="text" id="inputEmail" name="email" placeholder="john.doe@gmail.com"
-                       class="form-control" required>
-
+                <input type="text" id="inputEmail" name="email"
+                       class="form-control" value="<?php echo $clients->email ?>" required>
             </div>
         </div>
         <label for="inputInscription" class="control-label col-xs-4"></label>
         <input type="submit" id="inputInscription" value="Enregister" class="btn btn-primary"/>
-</form>
+    </form>
 
-<hr>
+    <?php
+}
+echo '<pre>';
+print_r($GLOBALS);
+echo '</pre>'; ?>
+
 

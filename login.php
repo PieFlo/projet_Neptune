@@ -16,6 +16,7 @@ if(isset($_POST) && count($_POST) > 0){
 		$_SESSION['prenom'] = $donnees['prenom'];
 		$_SESSION['admin'] = $donnees['admin'];
 		$_SESSION['email'] = $donnees['email'];
+        $_SESSION['numeroClient'] = $donnees['numeroClient'];
 		header('Location:panel.php');
 	}else{
         echo "Adresse email ou mot de passe incorrect !";

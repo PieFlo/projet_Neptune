@@ -1,9 +1,33 @@
 <?php
-if(isset($_POST['subpass'])){
-    $o_password = $_POST['o_password'];
-    $n_password = $_POST['n_password'];
-    $r_password = $_POST['r_password'];
+session_start();
+include_once('connexionBDD.php');
+if (isset($_POST) && count($_POST) > 0) {
+    extract(array_map("htmlspecialchars", $_POST));
+    $bdd=getDataBase();
+    if ($newPassword==$repeatNewPassword){
+        //$query = $bdd->prepare("SELECT password FROM clients WHERE numeroClient = :sessionNumCli");
+        //$query->bindParam(':sessionNumCli', $_SESSION['numeroClient']);
+        //$query->execute();
+        //$clients = $query->fetch(PDO::FETCH_OBJ);
+        $passwordMatch = checkPassword($bdd, $holdPassword, $_SESSION['numeroClient']);
+        //if ($clients->password==$holdPassword){
+        if ($passwordMatch==true){
+            $query = $bdd->prepare("UPDATE clients SET password = :newPassword WHERE numeroClient = :sessionNumCli");
+            $query->bindParam(':newPassword', $newPassword);
+            $query->bindParam(':sessionNumCli', $_SESSION['numeroClient']);
+            $query->execute(); // Exécute la requette $query.
+            $passwordMatch = checkPassword($bdd, $newPassword, $_SESSION['numeroClient']);
+            if ($passwordMatch==true)
+                echo "Nouveau mot de passe enregistré avec succès !";
+            else
+                echo "Echec du changement de mot de passe !";
+        }else
+            echo "Ancien mot de passe erroné !";
+    }else
+        echo "les nouveaux mots de passe ne corresondent pas !";
 
+
+/*
     //$o_password = md5($o_password);
 
     $query = $bdd->prepare("SELECT * FROM clients WHERE prenom='{$_SESSION['numeroClient']}' AND password='$o_password'") or die('Erreur : ' . $e->getMessage());
@@ -25,11 +49,11 @@ if(isset($_POST['subpass'])){
         $query->execute(); // Exécute la requette $query.
 
         header("Location:panel.php");
-    }
+    }*/
 }
 ?>
 
-<form method="post" action="" class ="form-horizontal">
+<form method="post" action="updateClientMdp.php" class ="form-horizontal">
     <div class="form-group">
         <label for="inputHoldPassword" class="control-label col-xs-4">Ancien mot de passe</label>
         <div class="col-xs-5">
@@ -52,13 +76,21 @@ if(isset($_POST['subpass'])){
                    class="form-control" required><br>
         </div>
     </div>
-    <p>Ancien du mot de passe</p>
-    <input type="password" name="o_password">
-    <p>Nouveau du mot de passe</p>
-    <input type="password" name="n_password">
-    <p>Confirmation du nouveau du mot de passe</p>
-    <input type="password" name="r_password">
-    <br><br>
     <label for="editPassword" class="control-label col-xs-4"></label>
-    <input type="submit" id="editPassword" value="Changer de mot de passe">
+    <input type="submit" id="editPassword" value="Enregister" class="btn btn-primary">
 </form>
+<?php echo '<pre>';
+print_r($GLOBALS);
+echo '</pre>';
+
+function checkPassword($bdd, $currentPassword, $currentNumCli){
+    $query = $bdd->prepare("SELECT password FROM clients WHERE numeroClient = :currentNumCli");
+    $query->bindParam(':currentNumCli', $currentNumCli);
+    $query->execute();
+    $clients = $query->fetch(PDO::FETCH_OBJ);
+    if ($clients->password==$currentPassword)
+        return true;
+    else
+        return false;
+}
+?>

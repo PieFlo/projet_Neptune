@@ -118,8 +118,8 @@ if (isset($_POST) && count($_POST) > 0) {
                        class="form-control" value="<?php echo $clients->email ?>" required>
             </div>
         </div>
-        <label for="inputInscription" class="control-label col-xs-4"></label>
-        <input type="submit" id="inputInscription" value="Enregister" class="btn btn-primary"/>
+        <label  class="control-label col-xs-4"></label>
+        <input type="submit" value="Enregister" class="btn btn-primary"/>
     </form>
 
     <?php

@@ -38,7 +38,7 @@ if (isset($_POST) && count($_POST) > 0) { // Quand on presse le bouton 'submit' 
         }
     }
 } else {
-    header('Location:index.html');
+    header('Location:index.php');
 }
 /*echo '<pre>';
 print_r($GLOBALS);

@@ -4,10 +4,13 @@ include_once('header.html');
 include 'connexionBDD.php'; // Permet de se connecter à la base de données.
 
 if(isset($_SESSION['email'])){
-    If ($_SERVER['HTTP_REFERER'] == "http://".$_SERVER['HTTP_HOST'].$_SERVER['CONTEXT_PREFIX']."/index.html"
-        || $_SERVER['HTTP_REFERER'] == "http://".$_SERVER['HTTP_HOST'].$_SERVER['CONTEXT_PREFIX']) {
-        echo "<div class=\"alert alert-success\">Bienvenue ".$_SESSION['prenom']." !</div>";
+    if(isset($_SERVER['HTTP_REFERER'])){
+        If ($_SERVER['HTTP_REFERER'] == "http://".$_SERVER['HTTP_HOST'].$_SERVER['CONTEXT_PREFIX']."/index.php"
+            || $_SERVER['HTTP_REFERER'] == "http://".$_SERVER['HTTP_HOST'].$_SERVER['CONTEXT_PREFIX']) {
+            echo "<div class=\"alert alert-success\">Bienvenue ".$_SESSION['prenom']." !</div>";
+        }
     }
+
 ?>
 
 
@@ -56,7 +59,7 @@ if(isset($_SESSION['email'])){
 <?php
 
 }else{
-	header('Location:index.html'); // permet de ne pas pouvoir acceder à la page directement en modifiant l'URL. Il faut obligatoirement s'inscrire.
+	header('Location:index.php'); // permet de ne pas pouvoir acceder à la page directement en modifiant l'URL. Il faut obligatoirement s'inscrire.
 }
 echo '<pre>';
 print_r($GLOBALS);

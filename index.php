@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!empty($_SESSION)){
+    header('Location:panel.php');
+}else session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,14 +15,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Accueil - Hôtel Neptune</title>
+
 </head>
 <body>
 <!-- NaveBar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="logo pull-left" href="index.html"><img src="images/hostel-white.png" width="45" height="45"/></a>
-            <a class="navbar-brand" href="index.html">&nbsp;&nbsp;Hôtel Neptune</a>
+            <a class="logo pull-left" href="index.php"><img src="images/hostel-white.png" width="45" height="45"/></a>
+            <a class="navbar-brand" href="index.php">&nbsp;&nbsp;Hôtel Neptune</a>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right">
@@ -209,7 +216,11 @@
             <!--<p><a class="btn btn-default" href="#" role="button">Voir Plus De Détails &raquo;</a></p>-->
         </div>
     </div>
-
+    <?php
+    echo '<pre>';
+    print_r($GLOBALS);
+    echo '</pre>';
+    ?>
     <hr>
 
     <footer>

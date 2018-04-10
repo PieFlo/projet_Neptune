@@ -31,7 +31,7 @@ if (isset($_POST) && count($_POST) > 0) {
 } else {
     $numeroClientToEdit = -1;
     if(isset($_GET) && count($_GET) > 0 && $_SESSION['admin']== true){
-        // $numeroClient = htmlspecialchars($_GET['numeroClient']); // si l'admin modifi un client
+        $numeroClientToEdit = $_GET['id']; // si l'admin modifi un client
     }else{
         $numeroClientToEdit = $_SESSION['numeroClient']; // quand un client modifi ses propres infos
     }
@@ -122,9 +122,9 @@ if (isset($_POST) && count($_POST) > 0) {
 
     <?php
 }
-echo '<pre>';
-print_r($GLOBALS);
-echo '</pre>';
+//echo '<pre>';
+//print_r($GLOBALS);
+//echo '</pre>';
 include_once('footer.html');
 ?>
 

@@ -28,7 +28,7 @@ if($_SESSION['admin']=='1'){
                 <a class="btn" href="delClient.php?id=<?=$donnees['numeroClient']?>" title="Supprimer le client">
                     <span class="glyphicon glyphicon-trash text-danger"></span>
                 </a>
-                <a href="editClient.php?id=<?=$donnees['numeroClient']?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                <a href="updateClient.php?id=<?=$donnees['numeroClient']?>"><span class="glyphicon glyphicon-pencil"></span></a>
             </td>
             <td class="text-center"><?php echo $donnees['numeroClient'];?></td>
             <td><?php echo $donnees['civil'];?></td>

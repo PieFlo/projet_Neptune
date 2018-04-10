@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('header.html');
-include 'connexionBDD.php'; // Permet de se connecter à la base de données.
+include_once ('connexionBDD.php'); // Permet de se connecter à la base de données.
 
 if(isset($_SESSION['email'])){
     if(isset($_SERVER['HTTP_REFERER'])){
@@ -12,14 +12,16 @@ if(isset($_SESSION['email'])){
     }
 
 ?>
-
-
-<h1>Tableau de bord</h1>
+<h1>Tableau de bord</h1><br>
     <div class="panel-group">
     <div class="panel panel-default">
-        <div class="panel-heading">Reservations</div>
+        <div class="panel-heading">L'Hôtel</div>
         <div class="panel-body">
-            <a href="chambres.php">Voir les chambres de l'hôtel</a><br>
+            <a href="listeChambre.php">Liste des chambres</a><br>
+<?php       if ($_SESSION['admin']==true) { ?>
+            <a href="listeClient.php">Liste des clients</a><br>
+<?php       } ?>
+            <a href="reservation.php">Ma réservation</a>
         </div>
     </div>
     <div class="panel panel-default">
@@ -36,21 +38,21 @@ if(isset($_SESSION['email'])){
                             <h4 class="modal-title">Déinscription</h4>
                         </div>
                         <div class="modal-body">
+<?php       if ($_SESSION['admin']==false) { ?>
                             <p>Êtes-vous sûr de vouloir vous déinscrire ?</p>
                         </div>
+<?php       } else { echo "<p>L'administrateur ne peut pas se désinscrire</p>";} ?>
                         <div class="modal-footer">
+<?php       if ($_SESSION['admin']==false) { ?>
                             <a href="unregister.php"><button type="button" class="btn btn-danger">Oui</button></a>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Non</button>
+<?php       } ?>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+<?php if ($_SESSION['admin']==false) echo "Non"; else echo "Fermer";?></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">Administration</div>
-        <div class="panel-body">
-            <p><a href="voirClients.php">Voir les clients de l'hôtel</a>. Admin uniquement !</p>
+
         </div>
     </div>
     </div>
@@ -59,10 +61,10 @@ if(isset($_SESSION['email'])){
 <?php
 
 }else{
-	header('Location:index.php'); // permet de ne pas pouvoir acceder à la page directement en modifiant l'URL. Il faut obligatoirement s'inscrire.
+	header('Location:logout.php'); // permet de ne pas pouvoir acceder à la page directement en modifiant l'URL. Il faut obligatoirement s'inscrire.
 }
-echo '<pre>';
-print_r($GLOBALS);
-echo '</pre>';
+//echo '<pre>';
+//print_r($GLOBALS);
+//echo '</pre>';
 include_once('footer.html');
 ?>

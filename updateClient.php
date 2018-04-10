@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Modification des informations</title>
 <?php
 session_start();
-include_once ('connexionBDD.php');// Permet de se connecter à la base de données.
+include_once('header.html');
+include_once ('connexionBDD.php');
 if (isset($_POST) && count($_POST) > 0) {
     extract(array_map("htmlspecialchars", $_POST));
     $bdd = getDataBase();
     try {
-        $stmt = $bdd->prepare("UPDATE clients SET civil = :civil, nom = :nom, prenom = :prenom, adresse = :adresse, codePostal = :codePostal, ville = :ville, pays = :pays, 
-                                            dateNaissance = :dateNaissance, email = :email WHERE numeroClient = :numeroClient");
-
+        $stmt = $bdd->prepare("UPDATE clients SET civil = :civil, nom = :nom, prenom = :prenom, 
+        adresse = :adresse, codePostal = :codePostal, ville = :ville, pays = :pays, 
+        dateNaissance = :dateNaissance, email = :email WHERE numeroClient = :numeroClient");
         $stmt->bindParam(':civil', $civil);
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':prenom', $prenom);
@@ -27,18 +24,18 @@ if (isset($_POST) && count($_POST) > 0) {
         $nbModifs = 0;
     }
     if ($nbModifs == 1) {
-        echo "La mise à jour a réussie.";
+        echo "<div class=\"alert alert-success\">La mise à jour a réussie.</div>";
     } else {
-        echo "La mise à jour a échoués";
+        echo "<div class=\"alert alert-danger\">La mise à jour a échoués</div>";
     }
 } else {
     $numeroClientToEdit = -1;
     if(isset($_GET) && count($_GET) > 0 && $_SESSION['admin']== true){
-        // $numeroClient = htmlspecialchars($_GET['numeroClient']);
+        // $numeroClient = htmlspecialchars($_GET['numeroClient']); // si l'admin modifi un client
     }else{
-        $numeroClientToEdit = $_SESSION['numeroClient'];
+        $numeroClientToEdit = $_SESSION['numeroClient']; // quand un client modifi ses propres infos
     }
-    if ($numeroClientToEdit > 0){
+    if ($numeroClientToEdit > 0){ // a-t-on bien le numéro d'un client ?
 
         $bdd = getDataBase();
         $query = $bdd->prepare("SELECT * FROM clients WHERE numeroClient=:numeroClientToEdit");
@@ -51,6 +48,7 @@ if (isset($_POST) && count($_POST) > 0) {
         }
     }
     ?>
+    <h1 class="text-center">Modifier les informations</h1><br>
     <form method="post" action="updateClient.php" class="form-horizontal">
 
         <div class="form-group">
@@ -126,6 +124,8 @@ if (isset($_POST) && count($_POST) > 0) {
 }
 echo '<pre>';
 print_r($GLOBALS);
-echo '</pre>'; ?>
+echo '</pre>';
+include_once('footer.html');
+?>
 
 

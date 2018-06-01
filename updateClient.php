@@ -24,6 +24,19 @@ if (isset($_POST) && count($_POST) > 0) {
         $nbModifs = 0;
     }
     if ($nbModifs == 1) {
+        if ($_SESSION['selfEdit']==true){
+            $_SESSION['civil'] = $civil;
+            $_SESSION['nom'] = $nom;
+            $_SESSION['prenom'] = $prenom;
+            $_SESSION['adresse'] = $adresse;
+            $_SESSION['codePostal'] = $codePostal;
+            $_SESSION['ville']=$ville;
+            $_SESSION['pays']=$pays;
+            $_SESSION['dateNaissance']=$dateNaissance;
+            $_SESSION['email']= $email;
+
+            unset($_SESSION['selfEdit']);
+        }
         echo "<div class=\"alert alert-success\">La mise à jour a réussie.</div>";
     } else {
         echo "<div class=\"alert alert-danger\">La mise à jour a échoués</div>";
@@ -32,8 +45,10 @@ if (isset($_POST) && count($_POST) > 0) {
     $numeroClientToEdit = -1;
     if(isset($_GET) && count($_GET) > 0 && $_SESSION['admin']== true){
         $numeroClientToEdit = $_GET['id']; // si l'admin modifi un client
+        $_SESSION['selfEdit'] = false;
     }else{
         $numeroClientToEdit = $_SESSION['numeroClient']; // quand un client modifi ses propres infos
+        $_SESSION['selfEdit'] = true;
     }
     if ($numeroClientToEdit > 0){ // a-t-on bien le numéro d'un client ?
 
@@ -122,9 +137,9 @@ if (isset($_POST) && count($_POST) > 0) {
 
     <?php
 }
-//echo '<pre>';
-//print_r($GLOBALS);
-//echo '</pre>';
+echo '<pre>';
+print_r($GLOBALS);
+echo '</pre>';
 include_once('footer.html');
 ?>
 

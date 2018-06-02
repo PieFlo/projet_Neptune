@@ -13,20 +13,10 @@ if(isset($_POST) && count($_POST) > 0){
     $donnees = $login->fetch();
 
 	if($donnees){
-		$_SESSION = [
-			'numeroClient' => $donnees['numeroClient'],
-			'civil' => $donnees['civil'],
-			'nom' => $donnees['nom'],
-			'prenom' => $donnees['prenom'],
-			'adresse' => $donnees['adresse'],
-			'codePostal' => $donnees['codePostal'],
-			'ville'=>$donnees['ville'],
-			'pays'=>$donnees['pays'],
-			'dateNaissance'=>$donnees['dateNaissance'],
-			'email'=> $donnees['email'],
-			'password'=> $donnees['password'],
-			'admin'=> $donnees['admin']
-		];
+		$_SESSION['prenom'] = $donnees['prenom'];
+		$_SESSION['admin'] = $donnees['admin'];
+		$_SESSION['email'] = $donnees['email'];
+        $_SESSION['numeroClient'] = $donnees['numeroClient'];
 		header('Location:panel.php');
 	}else{
         echo "Adresse email ou mot de passe incorrect !";

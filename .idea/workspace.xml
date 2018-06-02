@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8b100ef-b701-41c9-b566-a3fa5fe7354f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/delClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listeChambre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listeClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/listeClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unregister.php" beforeDir="false" afterPath="$PROJECT_DIR$/unregister.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/updateClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/updateClient.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +25,17 @@
       <file leaf-file-name="panel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="53" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="17">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateClient.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/updateClient.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="96" column="156" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="156" />
             </state>
           </provider>
         </entry>
@@ -33,35 +43,35 @@
       <file leaf-file-name="listeClient.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/listeClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+            <state relative-caret-position="306">
+              <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delClient.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/delClient.php">
+      <file leaf-file-name="listeChambre.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/listeChambre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unregister.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unregister.php">
+      <file leaf-file-name="chambres.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chambres.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="-844">
+              <caret line="23" column="109" lean-forward="true" selection-start-line="23" selection-end-line="23" selection-end-column="109" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateClient.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/updateClient.php">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="126" column="16" lean-forward="true" selection-start-line="124" selection-start-column="2" selection-end-line="126" selection-end-column="16" />
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -107,7 +117,6 @@
         <option value="$PROJECT_DIR$/membre.php" />
         <option value="$PROJECT_DIR$/update.php" />
         <option value="$PROJECT_DIR$/updatePassword.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/editClientPassword.php" />
         <option value="$PROJECT_DIR$/editClientData.php" />
         <option value="$PROJECT_DIR$/desinscrire.php" />
@@ -120,11 +129,13 @@
         <option value="$PROJECT_DIR$/voirClients.php" />
         <option value="$PROJECT_DIR$/header.html" />
         <option value="$PROJECT_DIR$/footer.html" />
-        <option value="$PROJECT_DIR$/panel.php" />
         <option value="$PROJECT_DIR$/unregister.php" />
         <option value="$PROJECT_DIR$/listeClient.php" />
         <option value="$PROJECT_DIR$/delClient.php" />
+        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/updateClient.php" />
+        <option value="$PROJECT_DIR$/panel.php" />
+        <option value="$PROJECT_DIR$/listeChambre.php" />
       </list>
     </option>
   </component>
@@ -137,16 +148,15 @@
   <component name="PhpDebugGeneral" xdebug_debug_port="9009" />
   <component name="PhpServers">
     <servers>
-      <server host="127.0.0.1" id="e69142bf-2418-4274-b2df-7c2356fea9b5" name="Neptune" />
+      <server host="127.0.0.1" id="e69142bf-2418-4274-b2df-7c2356fea9b5" name="Neptune" port="8080" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7" />
   <component name="PhpXdebugProxy" ide_key="xdebug" host="http://127.0.0.1" port="9010" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -225,6 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,15 +243,10 @@
               <item name="projet_Neptune" type="b2602c69:ProjectViewProjectNode" />
               <item name="projet_Neptune" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="projet_Neptune" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,7 +254,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP/Cours1 - V5 - MVC/listeclients.php" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../PHP/Cours1 - V5 - MVC/listeclients.php" />
   </component>
   <component name="RunDashboard">
@@ -314,18 +320,27 @@
       <workItem from="1523203920991" duration="4781000" />
       <workItem from="1523216910657" duration="4360000" />
       <workItem from="1523345216991" duration="7753000" />
-      <workItem from="1523362230113" duration="3891000" />
+      <workItem from="1523362230113" duration="4489000" />
+      <workItem from="1523389062639" duration="696000" />
+      <workItem from="1523429328386" duration="10498000" />
+      <workItem from="1523453298676" duration="1216000" />
+      <workItem from="1523535905227" duration="18910000" />
+      <workItem from="1523968856719" duration="2251000" />
+      <workItem from="1524044464441" duration="1466000" />
+      <workItem from="1524639304866" duration="9000" />
+      <workItem from="1527794111810" duration="1605000" />
+      <workItem from="1527844084872" duration="1574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155039000" />
+    <option name="totallyTimeSpent" value="193862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16341145" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17838542" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32968536" />
@@ -351,7 +366,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16341145" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1985677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -375,15 +390,24 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/projet_Neptune" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/compte_administrateur.php" />
-    <entry file="file://$PROJECT_DIR$/compte_client.php" />
-    <entry file="file://$PROJECT_DIR$/connect.php" />
+    <entry file="file://$PROJECT_DIR$/listeChambre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/connect_admin.php" />
     <entry file="file://$PROJECT_DIR$/function.php" />
     <entry file="file://$PROJECT_DIR$/connexion.php" />
@@ -443,13 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="44" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/updateClientMdp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -462,13 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="347" column="16" selection-start-line="347" selection-start-column="16" selection-end-line="347" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -486,20 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unregister.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -507,24 +503,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listeClient.php">
+    <entry file="file://$PROJECT_DIR$/delClient.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        <state relative-caret-position="646">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delClient.php">
+    <entry file="file://$PROJECT_DIR$/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        <state relative-caret-position="748">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listeClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/updateClient.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="126" column="16" lean-forward="true" selection-start-line="124" selection-start-column="2" selection-end-line="126" selection-end-column="16" />
+        <state relative-caret-position="646">
+          <caret line="96" column="156" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listeChambre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chambres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-844">
+          <caret line="23" column="109" lean-forward="true" selection-start-line="23" selection-end-line="23" selection-end-column="109" />
         </state>
       </provider>
     </entry>

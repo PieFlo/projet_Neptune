@@ -20,6 +20,7 @@ if(isset($_SESSION['email'])){
             <a href="listeChambre.php">Liste des chambres</a><br>
 <?php       if ($_SESSION['admin']==true) { ?>
             <a href="listeClient.php">Liste des clients</a><br>
+    <a href="listeReserv.php">Liste des réservations</a>
 <?php       } ?>
             <a href="reservation.php">Ma réservation</a>
         </div>

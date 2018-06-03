@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connexionBDD.php'; // Permet de se connecter à la base de données.
+include 'functions.php'; // Permet de se connecter à la base de données.
 $bdd = getDataBase();
 
 if($_SESSION['admin'] == true)

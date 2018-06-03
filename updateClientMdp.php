@@ -1,17 +1,14 @@
 <?php
 session_start();
 include_once('header.html');
-include_once('connexionBDD.php');
+include_once('functions.php');
 if (isset($_POST) && count($_POST) > 0) {
     extract(array_map("htmlspecialchars", $_POST));
     $bdd=getDataBase();
     if ($newPassword==$repeatNewPassword){
-        //$query = $bdd->prepare("SELECT password FROM clients WHERE numeroClient = :sessionNumCli");
-        //$query->bindParam(':sessionNumCli', $_SESSION['numeroClient']);
-        //$query->execute();
-        //$clients = $query->fetch(PDO::FETCH_OBJ);
+
         $passwordMatch = checkPassword($bdd, $holdPassword, $_SESSION['numeroClient']);
-        //if ($clients->password==$holdPassword){
+
         if ($passwordMatch==true){
             $query = $bdd->prepare("UPDATE clients SET password = :newPassword WHERE numeroClient = :sessionNumCli");
             $query->bindParam(':newPassword', $newPassword);

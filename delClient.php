@@ -2,7 +2,7 @@
 session_start();
 $numeroClientToDelete = -1;
 include_once ('header.html');
-include_once ('connexionBDD.php');
+include_once('functions.php');
 if(isset($_GET) && count($_GET) > 0 && $_SESSION['admin'] == true){
     if(isset($_GET['id'])){
         $numeroClientToDelete = htmlspecialchars($_GET['id']); // quand un client modifi ses propres infos

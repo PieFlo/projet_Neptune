@@ -1,6 +1,6 @@
 <?php
 include_once('headerUnlogged.html');
-include_once('connexionBDD.php');
+include_once('functions.php');
 
 if (isset($_POST) && count($_POST) > 0) { // Quand on presse le bouton 'submit' alors ...
 
@@ -40,8 +40,5 @@ if (isset($_POST) && count($_POST) > 0) { // Quand on presse le bouton 'submit' 
 } else {
     header('Location:index.php');
 }
-/*echo '<pre>';
-print_r($GLOBALS);
-echo '</pre>';*/
 include_once('footer.html');
 ?>

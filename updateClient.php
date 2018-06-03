@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('header.html');
-include_once ('connexionBDD.php');
+include_once('functions.php');
 if (isset($_POST) && count($_POST) > 0) {
     extract(array_map("htmlspecialchars", $_POST));
     $bdd = getDataBase();
@@ -137,9 +137,6 @@ if (isset($_POST) && count($_POST) > 0) {
 
     <?php
 }
-echo '<pre>';
-print_r($GLOBALS);
-echo '</pre>';
 include_once('footer.html');
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('connexionBDD.php');
+include_once('functions.php');
 include_once('header.html');
 ?>
 <h1 class="text-center">Liste des Chambres</h1><br>
@@ -63,13 +63,12 @@ $chambres = $stmt->fetchAll(PDO::FETCH_OBJ);
                                         ?>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="panel-footer clearfix">
-                            <div class="pull-right"><a>
-                                    <button class="btn">Réserver cette chambre</button>
-                                </a></div>
+                            <div class="pull-right">
+                                <a><button class="btn">Réserver cette chambre</button></a>
+                            </div>
 
                         </div>
                     </div>

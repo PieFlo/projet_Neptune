@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('header.html');
-include_once ('connexionBDD.php'); // Permet de se connecter à la base de données.
+include_once('functions.php'); // Permet de se connecter à la base de données.
 
 if(isset($_SESSION['email'])){
     if(isset($_SERVER['HTTP_REFERER'])){
@@ -17,10 +17,9 @@ if(isset($_SESSION['email'])){
     <div class="panel panel-default">
         <div class="panel-heading">L'Hôtel</div>
         <div class="panel-body">
-            <a href="listeChambre.php">Liste des chambres</a><br>
+            <a href="listeChambre.php">Effectuer une réservation</a><br>
 <?php       if ($_SESSION['admin']==true) { ?>
             <a href="listeClient.php">Liste des clients</a><br>
-    <a href="listeReserv.php">Liste des réservations</a>
 <?php       } ?>
             <a href="reservation.php">Ma réservation</a>
         </div>

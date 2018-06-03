@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once ('header.html');
-include('connexionBDD.php');
+include('functions.php');
 $bdd=getDataBase();
 if($_SESSION['admin']=='1'){
     $query = $bdd->query("SELECT * FROM clients"); // mysql_fetch_query

@@ -17,7 +17,7 @@ if ($result == 0){
     $reservation = end($reservations);
     if(strtotime(date("Y-m-d")) < strtotime($reservation["depart"])){
         // reservation trouvé dans le futur
-        $query = $bdd->query('SELECT * FROM chambres WHERE numeroChambre ='.$reservation["numeroChambre"]);
+        $query = $bdd->query('SELECT chambres.numeroChambre, capacite, exposition, douche, wc, bain, etage, URL FROM chambres, chambresphotos WHERE chambres.numeroChambre = chambresphotos.numeroChambre AND chambres.numeroChambre ='.$reservation["numeroChambre"]);
         $chambre = $query->fetch();
         //affichage de la réservation
 ?>
@@ -27,7 +27,7 @@ if ($result == 0){
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-lg-5"><img src="images/chambre1.jpg" alt="Chambre de l'hôtel Neptune" height="300"/>
+                    <div class="col-lg-5"><img src="<?= $chambre["URL"] ?>" alt="Chambre de l'hôtel Neptune" height="300"/>
                     </div>
                     <div class="col-lg-4">
                         <h4><strong>Chambre n°<?= $chambre["numeroChambre"] ?></strong></h4><br>

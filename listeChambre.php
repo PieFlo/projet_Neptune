@@ -4,25 +4,36 @@ include_once('functions.php');
 include_once('header.html');
 ?>
 <h1 class="text-center">Réservation de chambre</h1><br>
-<form action="" method="post" class="form-inline">
+<form action="listeChambre.php" method="post" class="form-inline">
 
     <div class="form-group">
         <label for="Date">Réserver du </label>
-        <input type="date" id="" name="" class="form-control" value="" required>
+        <input type="date" id="arrivee" name="arrivee" class="form-control" value="<?= isset($_POST["arrivee"])? $_POST["arrivee"] : "";?>" required>
         <label for="Date"> au </label>
-        <input type="date" id="" name="" class="form-control" value="" required>
+        <input type="date" id="depart" name="depart" class="form-control" value="<?= isset($_POST["depart"]) ? $_POST["depart"] : "";?>" required>
     </div>
-
     <input type="submit" value="Chercher" class="btn btn-default"/>
 </form>
 <br>
 <?php
 $bdd = getDataBase();
-$query = "SELECT numeroChambre, capacite, exposition, douche, wc, bain, etage, prix FROM chambres, tarifs where chambres.tarif = tarifs.codeTarif ";
-$stmt = $bdd->prepare($query);
+$queryWhere = "";
+
+if (isset($_POST) && count($_POST) > 0) {
+
+    $stmt=$bdd->prepare("SELECT DISTINCT numeroChambre FROM reservations WHERE (arrivee BETWEEN :arrivee AND :depart) AND (depart BETWEEN :arrivee AND :depart) OR (:arrivee BETWEEN arrivee AND depart) OR (:depart BETWEEN arrivee AND depart)");
+    $stmt->bindParam(':arrivee', $_POST["arrivee"]);
+    $stmt->bindParam(':depart', $_POST["depart"]);
+    $stmt->execute();
+    while ($donnees = $stmt->fetch()){
+        $queryWhere = $queryWhere." AND chambres.numeroChambre !=".$donnees['numeroChambre'];
+    }
+
+
+$stmt = $bdd->prepare("SELECT chambres.numeroChambre, capacite, exposition, douche, wc, bain, etage, prix, URL FROM chambres, tarifs, chambresphotos where chambres.numeroChambre = chambresphotos.numeroChambre AND chambres.tarif = tarifs.codeTarif".$queryWhere);
 $stmt->execute();
 $chambres = $stmt->fetchAll(PDO::FETCH_OBJ);
-
+//displayVar();
 ?>
 <div class="panel-group">
     <?php foreach ($chambres as $chambre) { ?>
@@ -30,7 +41,7 @@ $chambres = $stmt->fetchAll(PDO::FETCH_OBJ);
             <div class="panel-body">
                 <div class="row">
 
-                    <div class="col-lg-4"><img src="images/chambre1.jpg" alt="Chambre de l'hôtel Neptune" height="225"/>
+                    <div class="col-lg-4"><img src="<?= $chambre->URL ?>" alt="Chambre de l'hôtel Neptune" height="225"/>
                     </div>
                     <div class="col-lg-8">
                         <div class="panel-heading row">
@@ -67,7 +78,12 @@ $chambres = $stmt->fetchAll(PDO::FETCH_OBJ);
                         </div>
                         <div class="panel-footer clearfix">
                             <div class="pull-right">
-                                <a><button class="btn">Réserver cette chambre</button></a>
+                                <form action="addReserv.php" method="post">
+                                    <input type="hidden" name="arrivee" value="<?= $_POST["arrivee"] ?>"/>
+                                    <input type="hidden" name="depart" value="<?= $_POST["depart"] ?>"/>
+                                    <input type="hidden" name="numeroChambre" value="<?= $chambre->numeroChambre ?>"/>
+                                    <input type="submit" value="Réserver cette chambre" class="btn"/>
+                                </form>
                             </div>
 
                         </div>
@@ -79,6 +95,6 @@ $chambres = $stmt->fetchAll(PDO::FETCH_OBJ);
     <?php } ?>
 </div>
 <?php
-
+}
 include_once('footer.html');
 ?>

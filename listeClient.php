@@ -4,7 +4,7 @@ include_once ('header.html');
 include('functions.php');
 $bdd=getDataBase();
 if($_SESSION['admin']=='1'){
-    $query = $bdd->query("SELECT * FROM clients"); // mysql_fetch_query
+    $query = $bdd->query("SELECT * FROM clients");
 ?>
     <h1 class="text-center">Liste des clients</h1><br>
     <table class="table table-striped table-hover table-bordered">
@@ -20,9 +20,7 @@ if($_SESSION['admin']=='1'){
                 <th>Email</th>
             </tr>
         </thead>
-<?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
-        while($donnees = $query->fetch()){ // mysql_fetch_array
-?>
+<?php   while ($donnees = $query->fetch()){     ?>
         <tr>
             <td>
                 <a class="btn" href="delClient.php?id=<?=$donnees['numeroClient']?>" title="Supprimer le client">
@@ -38,10 +36,9 @@ if($_SESSION['admin']=='1'){
             <td class="text-center"><?php echo $donnees['dateNaissance'];?></td>
             <td><?php echo $donnees['email'];?></td>
         </tr>
-<?php
-        } //fin de la boucle, le tableau contient toute la BDD
-        $query->closeCursor(); //deconnection de mysql
-?>
+<?php   }
+        $query->closeCursor();?>
+
     </table>
 <?php
 }else{

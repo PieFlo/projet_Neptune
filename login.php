@@ -1,7 +1,6 @@
 <?php
 session_start();
-include 'functions.php'; // Permet de se connecter à la base de données.
-
+include 'functions.php';
 if(isset($_POST) && count($_POST) > 0){
     extract(array_map("htmlspecialchars", $_POST));
 

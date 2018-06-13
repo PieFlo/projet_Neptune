@@ -3,7 +3,7 @@ session_start();
 include_once('functions.php');
 include_once('header.html');
 ?>
-<h1 class="text-center">Liste des Chambres</h1><br>
+<h1 class="text-center">Réservation de chambre</h1><br>
 <form action="" method="post" class="form-inline">
 
     <div class="form-group">

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once('header.html');
+?><h1 class="text-center">Ma Réservation</h1><br><?php
 include_once('functions.php');
 
 $bdd = getDataBase();

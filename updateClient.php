@@ -134,7 +134,6 @@ if (isset($_POST) && count($_POST) > 0) {
         <label  class="control-label col-xs-4"></label>
         <input type="submit" value="Enregister" class="btn btn-primary"/>
     </form>
-
     <?php
 }
 include_once('footer.html');

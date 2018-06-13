@@ -22,7 +22,7 @@ if (isset($_POST) && count($_POST) > 0) {
         }else
             echo "<div class=\"alert alert-danger\">Ancien mot de passe erroné !</div>";
     }else
-        echo "<div class=\"alert alert-danger\">les nouveaux mots de passe ne corresondent pas !</div>";
+        echo "<div class=\"alert alert-danger\">Les nouveaux mots de passe ne corresondent pas !</div>";
 }
 ?>
     <h1 class="text-center">Changement de mot de passe</h1><br><br>

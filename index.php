@@ -217,14 +217,14 @@ if (!empty($_SESSION)){
         </div>
     </div>
     <?php
-    echo '<pre>';
-    print_r($GLOBALS);
-    echo '</pre>';
+//    echo '<pre>';
+//    print_r($GLOBALS);
+//    echo '</pre>';
     ?>
     <hr>
 
     <footer>
-        <p>&copy; 2017 Poujol Pierre-Florent B1 C1</p>
+        <p>&copy; 2019 Poujol Pierre-Florent - EPSI Montpellier - Bachelor 2</p>
     </footer>
 </div>
 <script type="text/javascript">
